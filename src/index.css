@@ -93,7 +93,7 @@
   .text-gradient {
     @apply bg-gradient-to-r from-accent-300 via-accent-400 to-accent-300 bg-clip-text text-transparent;
     background-size: 200% auto;
-    @apply animate-gradient-x;
+    animation: gradient-x 5s ease infinite;
   }
 
   /* Edge-fade mask for marquee tickers */
