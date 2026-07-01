@@ -1,0 +1,17 @@
+{
+  "name": "Plumbing NYC — 24/7 Emergency Plumber",
+  "short_name": "Plumbing NYC",
+  "description": "24/7 emergency plumbing services in New York City. Licensed, insured, 30+ years experience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b3d91",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

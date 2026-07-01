@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#0b3d91"/>
+  <!-- Liberty torch flame -->
+  <path d="M50 18C63 34 60 47 50 53 40 47 37 34 50 18Z" fill="#f9b825"/>
+  <!-- Torch cup -->
+  <path d="M41 53h18l-3 8H44z" fill="#ffffff"/>
+  <!-- Torch handle -->
+  <rect x="46" y="61" width="8" height="22" rx="2" fill="#ffffff"/>
+  <rect x="40" y="82" width="20" height="5" rx="2" fill="#ffffff"/>
+</svg>

@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  /* Respect users who prefer reduced motion (accessibility) */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-white text-slate-700 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-brand-900;
+  }
+
+  /* Visible focus outline for keyboard users */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent-400 ring-offset-2;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold
+           transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent-400 text-brand-900 shadow-lg shadow-accent-400/30
+           hover:bg-accent-300 hover:shadow-xl hover:shadow-accent-400/40 hover:-translate-y-0.5
+           focus-visible:ring-accent-400;
+  }
+
+  .btn-secondary {
+    @apply btn bg-brand-700 text-white shadow-lg shadow-brand-700/30
+           hover:bg-brand-600 hover:-translate-y-0.5 focus-visible:ring-brand-500;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-white/70 text-white hover:bg-white hover:text-brand-800
+           focus-visible:ring-white;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .eyebrow {
+    @apply inline-block text-sm font-semibold uppercase tracking-wider text-accent-500;
+  }
+
+  .card {
+    @apply rounded-2xl bg-white p-6 shadow-md ring-1 ring-slate-100 transition-all duration-300;
+  }
+}
