@@ -32,7 +32,7 @@ export default function ServicesSection({ limit, showHeading = true, showAllLink
                 id={service.slug}
                 className="card group h-full scroll-mt-28 hover:-translate-y-1 hover:shadow-xl hover:ring-brand-100"
               >
-                <span className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-50 text-brand-700 transition-colors duration-300 group-hover:bg-brand-700 group-hover:text-white">
+                <span className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-50 text-brand-700 transition-all duration-300 group-hover:-rotate-6 group-hover:scale-110 group-hover:bg-brand-700 group-hover:text-white">
                   <Icon name={service.icon} className="h-7 w-7" />
                 </span>
                 <h3 className="mt-5 text-xl font-bold text-brand-900">{service.title}</h3>

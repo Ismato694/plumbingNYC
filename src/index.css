@@ -46,9 +46,25 @@
   }
 
   .btn-primary {
-    @apply btn bg-accent-400 text-brand-900 shadow-lg shadow-accent-400/30
+    @apply btn relative overflow-hidden bg-accent-400 text-brand-900 shadow-lg shadow-accent-400/30
            hover:bg-accent-300 hover:shadow-xl hover:shadow-accent-400/40 hover:-translate-y-0.5
            focus-visible:ring-accent-400;
+  }
+
+  /* Light-sweep shine that runs across primary buttons on hover */
+  .btn-primary::after {
+    content: '';
+    @apply pointer-events-none absolute inset-0 -translate-x-full;
+    background: linear-gradient(
+      100deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.55) 50%,
+      transparent 80%
+    );
+  }
+  .btn-primary:hover::after {
+    @apply translate-x-full;
+    transition: transform 0.7s ease;
   }
 
   .btn-secondary {
@@ -71,5 +87,18 @@
 
   .card {
     @apply rounded-2xl bg-white p-6 shadow-md ring-1 ring-slate-100 transition-all duration-300;
+  }
+
+  /* Animated gradient text (brand → accent) */
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-300 via-accent-400 to-accent-300 bg-clip-text text-transparent;
+    background-size: 200% auto;
+    @apply animate-gradient-x;
+  }
+
+  /* Edge-fade mask for marquee tickers */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   }
 }

@@ -51,14 +51,56 @@ export default {
         },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-6px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        // Slow morphing background blobs for hero / banners
+        blob: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '33%': { transform: 'translate(30px, -20px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.95)' },
+        },
+        // Infinite horizontal ticker
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        // Sweep of light across buttons / cards
+        shimmer: {
+          '100%': { transform: 'translateX(200%)' },
+        },
+        // Animated gradient text
+        'gradient-x': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        // Slow spin for decorative rings
+        'spin-slow': {
+          to: { transform: 'rotate(360deg)' },
+        },
+        // Subtle attention wiggle
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        // Falling water droplet
+        drip: {
+          '0%': { transform: 'translateY(-10px)', opacity: '0' },
+          '20%': { opacity: '1' },
+          '100%': { transform: 'translateY(40px)', opacity: '0' },
         },
       },
       animation: {
         'fade-in-up': 'fade-in-up 0.6s ease-out both',
         'fade-in': 'fade-in 0.8s ease-out both',
         'pulse-ring': 'pulse-ring 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite',
-        float: 'float 3s ease-in-out infinite',
+        float: 'float 4s ease-in-out infinite',
+        blob: 'blob 12s ease-in-out infinite',
+        marquee: 'marquee 30s linear infinite',
+        shimmer: 'shimmer 2.5s ease-in-out infinite',
+        'gradient-x': 'gradient-x 5s ease infinite',
+        'spin-slow': 'spin-slow 24s linear infinite',
+        wiggle: 'wiggle 0.6s ease-in-out',
+        drip: 'drip 2.5s ease-in infinite',
       },
     },
   },

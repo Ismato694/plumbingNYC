@@ -16,8 +16,8 @@ export default function WhyChooseUs() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {whyChooseUs.map((feature, i) => (
             <Reveal key={feature.title} delay={(i % 3) * 80}>
-              <div className="flex h-full gap-4 rounded-2xl p-6 transition-colors hover:bg-slate-50">
-                <span className="grid h-12 w-12 flex-none place-items-center rounded-xl bg-accent-100 text-accent-600">
+              <div className="group flex h-full gap-4 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-50 hover:shadow-lg">
+                <span className="grid h-12 w-12 flex-none place-items-center rounded-xl bg-accent-100 text-accent-600 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                   <Icon name={feature.icon} className="h-6 w-6" />
                 </span>
                 <div>

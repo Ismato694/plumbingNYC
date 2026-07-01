@@ -1,4 +1,5 @@
 import Hero from '../components/sections/Hero'
+import Marquee from '../components/sections/Marquee'
 import TrustBar from '../components/sections/TrustBar'
 import ServicesSection from '../components/sections/ServicesSection'
 import WhyChooseUs from '../components/sections/WhyChooseUs'
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Marquee />
       <TrustBar />
       <ServicesSection limit={6} showAllLink />
       <WhyChooseUs />

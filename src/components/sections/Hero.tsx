@@ -9,8 +9,9 @@ export default function Hero() {
       {/* Decorative background */}
       <div className="absolute inset-0" aria-hidden="true">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800" />
-        <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-accent-400/10 blur-3xl" />
-        <div className="absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-brand-500/20 blur-3xl" />
+        <div className="absolute -right-24 -top-24 h-96 w-96 animate-blob rounded-full bg-accent-400/10 blur-3xl" />
+        <div className="absolute -bottom-32 -left-24 h-96 w-96 animate-blob rounded-full bg-brand-500/20 blur-3xl [animation-delay:5s]" />
+        <div className="absolute right-1/3 top-1/4 h-64 w-64 animate-blob rounded-full bg-sky-400/10 blur-3xl [animation-delay:8s]" />
         <svg className="absolute inset-0 h-full w-full opacity-[0.04]" aria-hidden="true">
           <defs>
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -34,7 +35,7 @@ export default function Hero() {
 
           <h1 className="mt-6 font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             NYC's Trusted
-            <span className="block text-accent-400">24/7 Emergency Plumber</span>
+            <span className="text-gradient block">24/7 Emergency Plumber</span>
           </h1>
 
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-200">
@@ -74,7 +75,10 @@ export default function Hero() {
 
         {/* Highlight card */}
         <div className="animate-fade-in-up lg:justify-self-end" style={{ animationDelay: '150ms' }}>
-          <div className="rounded-3xl bg-white/95 p-6 text-slate-800 shadow-2xl backdrop-blur sm:p-8">
+          <div className="relative rounded-3xl bg-white/95 p-6 text-slate-800 shadow-2xl backdrop-blur sm:p-8 lg:animate-float">
+            {/* Decorative water droplets */}
+            <span className="absolute -right-3 top-8 h-3 w-3 animate-drip rounded-full bg-sky-400/70 [animation-delay:0.4s]" aria-hidden="true" />
+            <span className="absolute -left-2 top-24 h-2.5 w-2.5 animate-drip rounded-full bg-brand-400/70 [animation-delay:1.6s]" aria-hidden="true" />
             <div className="flex items-center gap-3">
               <span className="grid h-12 w-12 place-items-center rounded-xl bg-accent-400 text-brand-900">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
